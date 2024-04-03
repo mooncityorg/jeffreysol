@@ -34,14 +34,14 @@ export default function Home() {
   return (
     <main className="relative min-h-screen overflow-hidden">
       <div className="flex flex-col relative z-20">
-        <div className="flex gap-4 mt-5 pr-5 w-full justify-end">
+        <div className="flex gap-4 mt-0 pr-5 w-full justify-end">
           <Link
             href="https://t.me/+0Gs7OKSzarc4N2Q0"
             className="zoom-in"
             target="noblank"
             rel="referrer"
           >
-            <Image src="/telegram.png" alt="telegram" width={60} height={60} />
+            <Image src="/telegram.png" alt="telegram" width={90} height={90} />
           </Link>
           <Link
             href="https://t.me/+0Gs7OKSzarc4N2Q0"
@@ -49,7 +49,7 @@ export default function Home() {
             target="noblank"
             rel="referrer"
           >
-            <Image src="/dextools.png" alt="dextools" width={60} height={60} />
+            <Image src="/dextools.png" alt="dextools" width={90} height={90} />
           </Link>
           <Link
             href="https://t.me/+0Gs7OKSzarc4N2Q0"
@@ -60,8 +60,8 @@ export default function Home() {
             <Image
               src="/dexscreener.png"
               alt="dexscreener"
-              width={60}
-              height={60}
+              width={90}
+              height={90}
             />
           </Link>
         </div>
