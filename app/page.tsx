@@ -36,7 +36,7 @@ export default function Home() {
       <div className="flex flex-col relative z-20">
         <div className="flex gap-4 mt-0 pr-5 w-full justify-end">
           <Link
-            href="https://t.me/+0Gs7OKSzarc4N2Q0"
+            href="https://t.me/jeffreyverify"
             className="zoom-in"
             target="noblank"
             rel="referrer"
@@ -44,7 +44,7 @@ export default function Home() {
             <Image src="/telegram.png" alt="telegram" width={90} height={90} />
           </Link>
           <Link
-            href="https://t.me/+0Gs7OKSzarc4N2Q0"
+            href="https://t.me/jeffreyverify"
             className="zoom-in"
             target="noblank"
             rel="referrer"
@@ -52,7 +52,7 @@ export default function Home() {
             <Image src="/dextools.png" alt="dextools" width={90} height={90} />
           </Link>
           <Link
-            href="https://t.me/+0Gs7OKSzarc4N2Q0"
+            href="https://t.me/jeffreyverify"
             className="zoom-in"
             target="noblank"
             rel="referrer"
