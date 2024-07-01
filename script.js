@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Simulate a delay (3 seconds in this case) before redirecting
     setTimeout(function() {
-      window.location.href = "index.html"; // Replace with your desired URL
+      window.location.href = "home.html"; // Replace with your desired URL
     }, 6000); // Adjust delay time as needed
   }
 
