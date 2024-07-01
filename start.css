@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #C0C0C0; /* Light gray background */
+}
+
+.centered-button {
+  text-align: center;
+}
+
+#customButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+#customButton img {
+  display: block;
+  width: 100px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.loading-screen {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 9999;
+}
+
+.loading-screen img {
+  display: block;
+  margin: 0 auto;
+  width: 490px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+}

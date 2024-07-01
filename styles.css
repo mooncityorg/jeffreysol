@@ -1,0 +1,50 @@
+@keyframes flicker {
+    0% { opacity: 1; }
+    50% { opacity: 0.8; }
+    100% { opacity: 1; }
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #C0C0C0;
+  }
+  
+  .loading-screen {
+    text-align: center;
+  }
+  
+  .loading-screen img {
+    max-width: 25%;
+    height: auto;
+  }
+  
+  .progress-bar {
+    width: 200px; /* Adjust width as needed */
+    height: 10px;
+    background-color: #ccc;
+    margin: 20px auto;
+    position: relative;
+  }
+  
+  .progress-bar::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 100%;
+    background-color: #4CAF50;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: progress 3s linear forwards;
+  }
+  
+  @keyframes progress {
+    100% {
+      width: 100%;
+    }
+  }
+  

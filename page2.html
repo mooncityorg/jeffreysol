@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JeffreyCoin Est. 2024</title>
+    <link rel="shortcut icon" href="img/favicon.png" />
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="crt.css">
+    <script src="https://code.jquery.com/jquery-1.11.2.js"></script>
+    <script type="text/javascript">
+        jQuery(window).load(function ($) {
+            atualizaRelogio();
+        });
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body onclick="startBackgroundMusic()">
+    <div class="overlay"></div> <!-- Overlay for the new image -->
+    
+    <!-- Audio tag for background music -->
+    <audio id="backgroundMusic" loop>
+        <source src="music/background.mp3" type="audio/mpeg">
+    </audio>
+    <div class="crt">
+        <div class="crt-screen crt-flicker">
+        </div>
+    </div>
+    <script>
+        var backgroundMusic = document.getElementById('backgroundMusic');
+        var musicStarted = false;
+
+        function startBackgroundMusic() {
+            if (!musicStarted) {
+                backgroundMusic.volume = 0.2; 
+                backgroundMusic.play();
+                musicStarted = true;
+            }
+        }
+    </script>
+    <div id="desktop">
+        <!-- LINHA 1 -->
+        <div class="celula-disponivel td" id="1">
+            <div draggable="true" class="teste" id="equipe-id">
+                <a href="#equipe" onclick="adicionar_elemento_barra_de_tarefas(1)">
+                    <img src="./img/My Computer.ico" alt="">
+                    <p>Hidden</p>
+                </a>
+            </div>
+        </div>
+        <div class="celula-disponivel td" id="2"></div>
+        <div class="celula-disponivel td" id="3"></div>
+        <div class="celula-disponivel td" id="4"></div>
+        <div class="celula-disponivel td" id="5"></div>
+        <div class="celula-disponivel td" id="6"></div>
+        <div class="celula-disponivel td" id="7"></div>
+        <div class="celula-disponivel td" id="8"></div>
+        <div class="celula-disponivel td" id="9"></div>
+        <div class="celula-disponivel td" id="10"></div>
+        <div class="celula-disponivel td" id="11"></div>
+        <div class="celula-disponivel td" id="12"></div>
+        <div class="celula-disponivel td" id="13"></div>
+
+        <!-- LINHA 2 -->
+        <div class="celula-disponivel td" id="14">
+            <div draggable="true" id="Powerpoint-id">
+                <a href="#Powerpoint" onclick="adicionar_elemento_barra_de_tarefas(2)">
+                    <img src="img/notepad.ico" alt="note">
+                    <p>Notejeff</p>
+                </a>
+            </div>
+        </div>
+        <div class="celula-disponivel td" id="15"></div>
+        <div class="celula-disponivel td" id="16"></div>
+        <div class="celula-disponivel td" id="17"></div>
+        <div class="celula-disponivel td" id="18"></div>
+        <div class="celula-disponivel td" id="19"></div>
+        <div class="celula-disponivel td" id="20"></div>
+        <div class="celula-disponivel td" id="21"></div>
+        <div class="celula-disponivel td" id="22"></div>
+        <div class="celula-disponivel td" id="23"></div>
+        <div class="celula-disponivel td" id="24"></div>
+        <div class="celula-disponivel td" id="25"></div>
+        <div class="celula-disponivel td" id="26"></div>
+
+        <!-- LINHA 3 -->
+        <div class="celula-disponivel td" id="27">
+            <div draggable="true" id="gatos-id">
+                <a href="https://t.me/jeffreyverify" style="text-decoration: none;">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/2048px-Telegram_logo.svg.png" alt="">
+                    <p>Telegram</p>
+                </a>
+            </div>
+        </div>
+        <div class="celula-disponivel td" id="28"></div>
+        <div class="celula-disponivel td" id="29"></div>
+        <div class="celula-disponivel td" id="30"></div>
+        <div class="celula-disponivel td" id="31"></div>
+        <div class="celula-disponivel td" id="32"></div>
+        <div class="celula-disponivel td" id="33"></div>
+        <div class="celula-disponivel td" id="34"></div>
+        <div class="celula-disponivel td" id="35"></div>
+        <div class="celula-disponivel td" id="36"></div>
+        <div class="celula-disponivel td" id="37"></div>
+        <div class="celula-disponivel td" id="38"></div>
+        <div class="celula-disponivel td" id="39"></div>
+
+        <!-- LINHA 4 -->
+        <div class="celula-disponivel td" id="40">
+            <div draggable="true" id="doom-id">
+                <a href="https://x.com/jeffreyoncoin" style="text-decoration: none;">
+                    <img src="img/twitter-original.svg" alt="twitter">
+                    <p>Twitter</p>
+                </a>
+            </div>
+        </div>
+        <div class="celula-disponivel td" id="41"></div>
+        <div class="celula-disponivel td" id="42"></div>
+        <div class="celula-disponivel td" id="43"></div>
+        <div class="celula-disponivel td" id="44"></div>
+        <div class="celula-disponivel td" id="45"></div>
+        <div class="celula-disponivel td" id="46"></div>
+        <div class="celula-disponivel td" id="47"></div>
+        <div class="celula-disponivel td" id="48"></div>
+        <div class="celula-disponivel td" id="49"></div>
+        <div class="celula-disponivel td" id="50"></div>
+        <div class="celula-disponivel td" id="51"></div>
+        <div class="celula-disponivel td" id="52"></div>
+
+        <!-- dexscreener icon 
+        <div class="celula-disponivel td" id="53">
+            <div draggable="true" id="disquetech-id">
+                <a href="#disquetech" onclick="adicionar_elemento_barra_de_tarefas(5)">
+                    <img src="img/Dexscreener.png" alt="">
+                    <p>Dexscreener</p>
+                </a>
+            </div>
+        </div>
+        <div class="celula-disponivel td" id="54"></div>
+        <div class="celula-disponivel td" id="55"></div>
+        <div class="celula-disponivel td" id="56"></div>
+        <div class="celula-disponivel td" id="57"></div>
+        <div class="celula-disponivel td" id="58"></div>
+        <div class="celula-disponivel td" id="59"></div>
+        <div class="celula-disponivel td" id="60"></div>
+        <div class="celula-disponivel td" id="61"></div>
+        <div class="celula-disponivel td" id="62"></div>
+        <div class="celula-disponivel td" id="63"></div>
+        <div class="celula-disponivel td" id="64"></div>
+        <div class="celula-disponivel td" id="65"></div>-->
+
+        <!-- LINHA 6 -->
+        <div class="celula-disponivel td" id="66">
+            <div draggable="true" id="video-id">
+                <a href="#video" onclick="adicionar_elemento_barra_de_tarefas(6)">
+                    <img src="img/videoicon.png" alt="">
+                    <p>Watch This</p>
+                </a>
+            </div>
+        </div>
+        <div class="celula-disponivel td" id="67"></div>
+        <div class="celula-disponivel td" id="68"></div>
+        <div class="celula-disponivel td" id="69"></div>
+        <div class="celula-disponivel td" id="70"></div>
+        <div class="celula-disponivel td" id="71"></div>
+        <div class="celula-disponivel td" id="72"></div>
+        <div class="celula-disponivel td" id="73"></div>
+        <div class="celula-disponivel td" id="74"></div>
+        <div class="celula-disponivel td" id="75"></div>
+        <div class="celula-disponivel td" id="76"></div>
+        <div class="celula-disponivel td" id="77"></div>
+        <div class="celula-disponivel td" id="78"></div>
+    </div>
+    
+
+    <div id="barraDeTarefas">
+        <a href="#menu" onclick="inserir_menu_iniciar()" id="menu-iniciar-id">
+            <div id="menu-iniciar"><img width="100" id="menu-iniciar-start" src="./img/menu.png" alt=""></div>
+        </a>
+        <div id="barra-lateral">
+            <!---colocar aqui o botão para tela cheia-->
+            <button id="fullscreen-button" onclick="toggleFullScreen()">
+                <img width="24" height="24" src="./img/telacheia.png" alt="Tela Cheia">
+            </button>
+            <a><output id="hora"></output></a>
+            <a><output id="dia"></output></a>
+        </div>
+    </div>
+    
+    <script>
+        function toggleFullScreen() {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen().catch(err => {
+                    alert(`Erro ao tentar entrar em modo de tela cheia: ${err.message}`);
+                });
+            } else {
+                document.exitFullscreen();
+            }
+        }
+    </script>
+    
+    <!-- MODALS -->
+    <!-- MODAL - PASTA: MEU COMPUTADOR -->
+      
+
+    <div id="equipe" class="modal">
+        <div class="modal-header">
+            <div style="width: 800px; display: flex; gap: 3px;">
+                <img src="./img/Monitor.ico" alt="">
+                <h4 style="font-size: var(--16px);">Staking</h4>
+            </div>
+            <div class="header-botoes">
+                <a href="#"><img src="./img/botao-minimizar.png" alt=""></a>
+                <a href="#"><img src="./img/botao-maximizar.png" alt=""></a>
+                <a href="#fechar" title="Fechar" class="fechar" onclick="retirar_elemento_barra_de_tarefas()"><img src="./img/botao-fechar.png" alt=""></a>
+            </div>
+        </div>
+        <ul style="display: flex; gap: 5px; background-color: #F1EFE1; border-bottom: 2px solid #DEDED2; font-size: var(--16px); height: 4.1vh;">
+            <li>File</li>
+            <li>Edit</li>
+            <li>View</li>
+            <li>Favorites</li>
+            <li>Tools</li>
+            <li>Help</li>
+            <img style="background-color: #ffffff; padding: 0 10px; margin-left: auto;" class="imagem-media" src="./img/logo windows.png" alt="">
+        </ul>
+        <div>
+            <ul id="navegacao">
+                <li><img class="imagem-media" src="./img/Back.png" alt=""></li>
+                <img style="margin: 5px; width: 0.6vw;" src="./img/seta-pra-baixo.svg" alt="">
+                <li><img class="imagem-media" src="./img/Forward.png" alt=""></li>
+                <img style="margin: 5px; width: 0.6vw;" src="./img/seta-pra-baixo.svg" alt="">
+                <li><img class="imagem-media" src="./img/Up.png" alt=""></li>
+                <li><img class="imagem-media" src="./img/pesquisar.ico" alt=""></li>
+                <li><img class="imagem-media" src="./img/pastas-abertas.png" alt=""></li>
+                <li><img class="imagem-media" src="./img/Icon View.png" alt=""></li>
+                <img style="margin: 5px; width: 0.6vw;" src="./img/seta-pra-baixo.svg" alt="">
+            </ul>
+            <div id="meu-pc-endereco">
+                <h4 style="font-size: var(--16px); font-weight: normal;">Address</h4>
+                <div id="endereco-link">
+                    <p>Coming Soon</p>
+                    <img src="./img/seta-pra-baixo.svg" alt="">
+                </div>
+                <div id="endereco-ir">
+                    <p>Go</p>
+                </div>
+            </div>
+           
+        </div>
+
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- MODAL - API cachorros-->
+    <div id="monte-seu-pc" class="modal">
+        <div class="modal-header">
+            <div style="width: 800px; display: flex; gap: 3px;">
+                <img src="./img/logoamefesthempefundobranco (1).png" alt="">
+                <h4>Monte seu PC - APP</h4>
+            </div>
+            <div class="header-botoes">
+                <a href="#">
+                    <img src="./img/botao-minimizar.png" alt="">
+                </a>
+                <a href="#">
+                    <img src="./img/botao-maximizar.png" alt="">
+                </a>
+                <a href="#fechar" title="Fechar" class="fechar" id="botao-fechar-imagem-gato" onclick="retirar_elemento_barra_de_tarefas()">
+                    <img src="./img/botao-fechar.png" alt="">
+                </a>
+            </div>
+        </div>
+            <iframe src="https://monteseupc.netlify.app"></iframe>
+    </div>
+
+    <!-- MODAL - JOGO: DOOM -->
+    <div id="doom" class="modal">
+        <div class="modal-header doom-header">
+            <div style="width: 800px; display: flex; gap: 3px;">
+                <img id="doom-logo" src="./img/Pac-Man_logo.png" alt="">
+                <h4>PAC MAN </h4>
+            </div>
+            <div class="header-botoes">
+                <a href="/">
+                    <img src="./img/botao-minimizar.png" alt="">
+                </a>
+                <a>
+                    <img src="./img/botao-maximizar-disabled.png" alt="">
+                </a>
+                <a href="#fechar" title="Fechar" class="fechar" onclick="retirar_doom(), retirar_elemento_barra_de_tarefas()">
+                    <img src="./img/botao-fechar.png" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL - video -->
+    <div id="video" class="modal">
+        <div class="modal-header">
+            <div style="width: 800px; display: flex; gap: 3px;">
+                <img id="video-logo" src="https://i.pinimg.com/originals/8d/24/da/8d24da19fb274d9d63501973f86dbf63.jpg" alt="">
+                <h4>Watch this</h4>
+            </div>
+            <div class="header-botoes">
+                <a href="#"><img src="./img/botao-minimizar.png" alt=""></a>
+                <a><img src="./img/botao-maximizar-disabled.png" alt=""></a>
+                <a href="#fechar" title="Fechar" class="fechar" onclick="retirar_elemento_barra_de_tarefas()"><img src="./img/botao-fechar.png" alt=""></a>
+            </div>
+        </div>
+        <iframe src="img/Wojak - MOASS Breaks Matrix.mp4" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <!-- MODAL - disquetech -->
+    <div id="disquetech" class="modal">
+        <div class="modal-header">
+            <div style="width: 800px; display: flex; gap: 3px;">
+                <img src="./logodisquetechsrlnova.png" alt="">
+                <h4>JEFF</h4>
+            </div>
+            <div class="header-botoes">
+                <a href="#">
+                    <img src="./img/botao-minimizar.png" alt="">
+                </a>
+                <a href="#">
+                    <img src="./img/botao-maximizar.png" alt="">
+                </a>
+                <a href="#fechar" title="Fechar" class="fechar" onclick="retirar_elemento_barra_de_tarefas()">
+                    <img src="./img/botao-fechar.png" alt="">
+                </a>
+            </div>
+        </div>
+        <iframe src="https://disquetech.netlify.app" width="1280" height="768"></iframe>
+    </div>
+
+    <!-- MODAL - Powerpoint -->
+    <!-- TEMPLATE MODAL -->
+    <div id="Powerpoint" class="modal">
+        <div class="modal-header">
+            <div style="width: 800px; display: flex; gap: 3px;">
+                <img id="Powerpoint-icone" src="https://i.pinimg.com/564x/d5/b8/db/d5b8db97fcf3672fb9b545e1095b6470.jpg" alt="">
+                <h4>Note</h4>
+            </div>
+            <div class="header-botoes">
+                <a href="#">
+                    <img src="./img/botao-minimizar.png" alt="">
+                </a>
+                <a href="#">
+                    <img src="./img/botao-maximizar-disabled.png" alt="">
+                </a>
+                <a href="#fechar" title="Fechar" class="fechar" onclick="retirar_elemento_barra_de_tarefas()">
+                    <img src="./img/botao-fechar.png" alt="">
+                </a>
+            </div>
+        </div>
+        <!--COlocar aqui o pdf da empresa-->
+        <iframe src="img/text.jpg"  width="1280" height="768"></iframe>
+    </div>
+    
+    
+    <script>
+
+        const elementos = document.querySelectorAll("[draggable='true']");
+        const celulas_disponiveis = document.querySelectorAll(".celula-disponivel");
+
+        elementos.forEach((elemento) => {
+            elemento.addEventListener("dragstart", comecar_arrastar);
+        })
+        celulas_disponiveis.forEach((celula) => {
+            celula.addEventListener("dragover", entrou_soltar);
+        })
+        celulas_disponiveis.forEach((celula) => {
+            celula.addEventListener("dragleave", saiu_soltar);
+        })
+        celulas_disponiveis.forEach((celula) => {
+            celula.addEventListener("dragend", soltou_elemento);
+        })
+        function soltou_elemento() {
+            this.classList.remove("celula-disponivel");
+            this.classList.add("celula-");
+            this.children[0].classList.remove("arrastando");
+            localStorage.setItem(this.children[0].id, this.id); //para salvar a config do desktop
+            // console.log(this.id);
+            // console.log(localStorage.getItem("Powerpoint-id"));
+            // console.log(this.children[0].id);
+
+            //alert(this.children[0].className);
+        }
+        function saiu_soltar() {
+            this.classList.add("celula-disponivel");
+            this.classList.remove("celula-");
+            //let name = document.getElementById("myLI").parentNode.nodeName;
+            this.classList.remove("arrastado");
+        }
+        function entrou_soltar() {
+
+            if (this.children[0] == undefined) {
+                this.classList.add("arrastado");
+
+                const elemento_arrastado = document.querySelector(".arrastando");
+
+                this.appendChild(elemento_arrastado);
+            }
+        }
+        function comecar_arrastar() {
+            this.classList.add("arrastando");
+        }
+        function atualizaRelogio() {
+            var momentoAtual = new Date();
+
+            var vhora = momentoAtual.getHours();
+            var vminuto = momentoAtual.getMinutes();
+
+            if (vhora < 10) { vhora = "0" + vhora; }
+            if (vminuto < 10) { vminuto = "0" + vminuto; }
+
+            horaFormat = vhora + ":" + vminuto;
+
+            document.getElementById("hora").innerHTML = horaFormat;
+
+            setTimeout("atualizaRelogio()", 60000);
+        }
+        function atualizaData() {
+    var momentoAtual = new Date();
+
+    var vdia = momentoAtual.getDate();
+    var vmes = momentoAtual.getMonth() + 1; // Os meses em JavaScript são indexados a partir de 0 (janeiro é 0, fevereiro é 1, etc.)
+    var vano = momentoAtual.getFullYear();
+
+    if (vdia < 10) { vdia = "0" + vdia; }
+    if (vmes < 10) { vmes = "0" + vmes; }
+
+    var dataFormat = vdia + "/" + vmes + "/" + vano;
+
+    document.getElementById("dia").innerHTML = dataFormat;
+
+    setTimeout(atualizaData, 86400000); // Atualiza a data a cada 24 horas (86400000 milissegundos)
+}
+
+atualizaData();
+
+        function inserir_doom() {
+            const iframe = document.createElement("iframe");
+            iframe.src = "pacman.html";
+            iframe.width = "100%";
+            iframe.height = "100%";
+            iframe.id = "iframe-doom";
+            document.getElementById("doom").appendChild(iframe);
+        }
+        function retirar_doom() {
+            const iframe_doom = document.getElementById("iframe-doom");
+            iframe_doom.parentNode.removeChild(iframe_doom);
+        }
+        function inserir_menu_iniciar() {
+            const body = document.body;
+            body.innerHTML += (`<div id="menu" class="modal" onblur="retirar_menu_iniciar()">
+        <div id="menu-header">
+            <div id="usuario">
+                <img width="40" id="usuario-perfil" src="./logodisquetechsrlnova.png" alt="">
+                <h3 id="usuario-nome">JEFF</h3>
+            </div>
+        </div>
+        <div class="lista-programas">
+            <ul id="menu-lado-1">
+                <li class="menu-item" href="#disquetech">
+                    <img width="40" class="menu-item-img" src="./img/Google_Chrome_icon.png" alt="">
+                    <div>
+                        <h6>Internet</h6>
+        
+                    </div>
+                </li>
+                <li class="menu-item">
+                    <img width="40" class="menu-item-img" src="img/Outlook-Express-Icone.png" alt="">
+                    <div>
+                        <h6>Email</h6>
+                    </div>
+                </li>
+                <span></span>
+                <li class="menu-item">
+                    <img width="40" class="menu-item-img" src="img/Microsoft-Excel.png" alt="">
+                    <h6 class="texto-500">Microsoft Office Excel 2003</h6>
+                </li>
+                <li class="menu-item">
+                    <img width="40" class="menu-item-img" src="img/bloco-de-notas.png" alt="">
+                    <h6 class="texto-500">Notepad</h6>
+                </li>
+                <li class="menu-item">
+                    <img width="40" class="menu-item-img" src="img/Windows Media Player 10.png" alt="">
+                    <h6 class="texto-500">Windows Media Player</h6>
+                </li>
+                <li class="menu-item">
+                    <img width="40" class="menu-item-img" src="img/Microsoft-Word.png" alt="">
+                    <h6 class="texto-500">Microsoft Office Word 2003</h6>
+                </li>
+                <li class="menu-item">
+                    <img width="40" class="menu-item-img" src="img/msn.png" alt="">
+                    <h6 class="texto-500">Windows Live Messenger</h6>
+                </li>
+                <span></span>
+            </ul>
+            <ul id="menu-lado-2">
+                <li class="menu-item texto-azul">
+                    <img width="40" class="menu-item-img" src="img/meus-documentos.ico" alt="">
+                    <h6>File Explorer</h6>
+                </li>
+                <li class="menu-item texto-azul">
+                    <img width="40" class="menu-item-img" src="img/documentos-recentes.ico" alt="">
+                    <h6>Recent documents</h6>
+                </li>
+                <li class="menu-item texto-azul">
+                    <img width="40" class="menu-item-img" src="img/minhas-imagens.ico" alt="">
+                    <h6>My images</h6>
+                </li>
+                <li class="menu-item texto-azul">
+                    <img width="40" class="menu-item-img" src="img/minhas-musicas.ico" alt="">
+                    <h6>My songs</h6>
+                </li>
+                <span></span>
+                <li class="menu-item texto-azul">
+                    <img width="40" class="menu-item-img" src="img/twitter-original.svg" alt="">
+                    <h6 class="texto-500">Twitter</h6>
+                </li>
+                <li class="menu-item texto-azul">
+                    <img width="40" class="menu-item-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/2048px-Telegram_logo.svg.png" alt="">
+                    <h6 class="texto-500">Telegram</h6>
+                </li>
+                <li class="menu-item texto-azul">
+                    <img width="40" class="menu-item-img" src="https://images.seeklogo.com/logo-png/52/1/dex-screener-logo-png_seeklogo-527276.png" alt="">
+                    <h6 class="texto-500">Dexscreener</h6>
+                </li>
+                <span></span>
+
+                <!-- DISSAPEARED
+                <li class="menu-item texto-azul">
+                    <img width="40" class="menu-item-img" src="img/ajuda-e-suporte.ico" alt="">
+                    <h6 class="texto-500">Ajuda e suporte</h6>
+                </li>
+                <li class="menu-item texto-azul">
+                    <img width="40" class="menu-item-img" src="img/pesquisar.ico" alt="">
+                    <h6 class="texto-500">Pesquisar</h6>
+                </li>
+                <li class="menu-item texto-azul">
+                    <img width="40" class="menu-item-img" src="img/executar.ico" alt="">
+                    <h6 class="texto-500">Executar...</h6>
+                </li> -->
+            </ul>
+        </div>
+        <div id="menu-footer">
+            <div class="span"></div>
+               <a href="#menu" onclick="confirmExit(); return false;">
+      <img width="40" src="img/Power.png" alt="">
+      <p>Log out</p>
+    </a>
+
+        </div>
+    </div>`);
+            const menu = document.getElementById("desktop");
+            menu.addEventListener("click", () => {
+                const menu_iniciar = document.getElementById("menu");
+                menu_iniciar.remove(menu_iniciar);
+                console.log("OPA"); 
+            })
+        }
+        function adicionar_elemento_barra_de_tarefas(num) {
+            const botao = document.getElementById("menu-iniciar-id");
+            const caixa_barra = document.createElement("div");
+            caixa_barra.id = "elemento-barra-de-tarefas";
+            caixa_barra.classList.add("caixa-barra"); //div adicionada ao lado do botao iniciar, ja adiciona com a classe "caixa-barra"
+
+
+            if (num == 1) { //variavel "num" vem por parametro, nos links dos programas ele chama essa função passando por parametro um numero, cada um passa um numero diferente, ai de acordo com o numero sabemos qual programa abriu, ai da pra saber se coloca o icone do video, doom, etc
+                caixa_barra.innerHTML += `<img src="./img/monitor.ico"><p>Nossa Equipe</p>`
+            } else if (num == 2) {
+                caixa_barra.innerHTML += `<img src="https://i.pinimg.com/564x/34/0e/cc/340eccd449e14b6a3bd86f0e989a1fab.jpg"><p>The only thing that can stop me is death</p>`
+            } else if (num == 3) {
+                caixa_barra.innerHTML += `<img src="./img/logoamefesthempefundobranco (1).png"><p>Monte seu PC</p>`
+            } else if (num == 4) {
+                caixa_barra.innerHTML += `<img src="./img/Doom_logo.png"><p>Doom</p>`
+            } else if (num == 5) {
+                caixa_barra.innerHTML += `<img src="./logodisquetechsrlnova.png"><p>JEFF</p>`;
+            } else if (num == 6) {
+                caixa_barra.innerHTML += `<img src="./img/hiddenmessage.jpg"><p>Valuing yourself is the smartest investment you can make</p>`;
+            }
+
+            botao.after(caixa_barra); //este método insere a caixinha depois do botao INICIAR da barra de tarefas
+        }
+        function retirar_elemento_barra_de_tarefas() {
+            const elemento_barra_de_tarefas = document.getElementById("elemento-barra-de-tarefas");
+            elemento_barra_de_tarefas.remove(elemento_barra_de_tarefas);
+        }
+        function confirmExit() {
+        if (confirm("Você quer sair do site?")) {
+          window.location.href = "https://youtu.be/dQw4w9WgXcQ?si=rdt9WUcrrEZjl7NW";
+        }
+        }
+        //para carregar a área de trabalho no estado em que se encontrava anteriormente
+        window.onload = () => {
+            if (localStorage.length == 0) {
+                //inicializar localização dos icones
+                localStorage.setItem("equipe-id", 1);
+                localStorage.setItem("Powerpoint-id", 14);
+                localStorage.setItem("gatos-id", 27);
+                localStorage.setItem("doom-id", 40);
+                localStorage.setItem("disquetech-id", 53);
+                localStorage.setItem("video-id", 66);
+            }
+            Object.keys(localStorage).forEach((key) => {
+                const elemento_desktop = document.getElementById(`${key}`);
+                console.log(elemento_desktop);
+                const div_elemento = elemento_desktop.parentNode;
+                div_elemento.removeChild(elemento_desktop);
+                const nova_div_elemento = document.getElementById(`${localStorage.getItem(key)}`);
+                nova_div_elemento.appendChild(elemento_desktop);
+            })
+        }   
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(function() {
+                var loader = document.getElementById('loader');
+                loader.classList.add('fade-out');
+                setTimeout(function() {
+                    loader.style.display = 'none';
+                }, 1000); // Correspondente ao tempo da animação
+            }, 2000);
+        });
+        window.onload = function() {
+            if (window.matchMedia("(max-width: 768px)").matches) {
+                window.location.href = "https://disquetech.netlify.app"; 
+            }
+        };
+
+
+    </script>
+    <script src="api-cachorro.js"></script>
+    
+</body>
+
+</html>
