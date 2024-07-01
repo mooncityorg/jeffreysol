@@ -1,8 +1,16 @@
 {
-    "rewrites": [
-        {
-            "source": "/",
-            "destination": "/home.html"
-        }
-    ]
+  "version": 2,
+  "builds": [
+    {
+      "src": "dist/home.html",
+      "use": "@vercel/node",
+      "config": { "includeFiles": ["dist/**"] }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "dist/home.html"
+    }
+  ]
 }
